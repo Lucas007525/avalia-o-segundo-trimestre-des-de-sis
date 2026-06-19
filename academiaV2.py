@@ -6,7 +6,7 @@ class AlunoAcademia:
 #Método construtor.
 #é executado automaticamente quando um aluno é criado.
 #recebe os dados dos alunos e os armazena em atributos privados de classe:
-#def __init__, (self, nome, idade, peso e altura).
+#def __init__, (self, nome, idade, peso e altura) __init__é a iniciação da classe. 
 
     def __init__(self, nome, idade, peso, altura):
         self.__nome = nome
@@ -102,7 +102,13 @@ def ler_nome():
 
     while True:
 
+#O método strip funciona como uma borracha que apaga todos os espaços invisíveis ou caractéres
+#indesejados. 
+
         nome = input("Nome: ").strip()
+
+#Funciona como um formatador de nomes próprios, que automáticamente transforma a primeira letra
+#de cada palavra em maiúscula e deixa o restante em minúsculo.
 
         if nome != "":
             return nome.title()
@@ -122,6 +128,9 @@ def ler_idade():
                 return idade
 
             print("Digite uma idade entre 10 e 120 anos.")
+
+#execpt ValueError é um escudo de segurança no código que entra em ação para salvar o programa 
+#caso o usuário digite um dado totalmente errado do que era esperado.
 
         except ValueError:
 
